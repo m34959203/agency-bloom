@@ -22,7 +22,7 @@ export function ExperienceController() {
 
       {/* Meta information */}
       <MetaCorner position="top-left">
-        Agency
+        Агентность
       </MetaCorner>
 
       <MetaCorner position="bottom-right">

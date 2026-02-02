@@ -10,12 +10,12 @@ export function EntryScreen({ onBegin }: EntryScreenProps) {
       <div className="flex flex-col items-center max-w-lg text-center">
         {/* Direct statement */}
         <h1 className="text-headline mb-grid-3">
-          You are not lazy.
+          Ты не ленивый.
         </h1>
         
         <p className="text-body mb-grid-6 max-w-md">
-          Overload creates paralysis. Small completions restore motion. 
-          This takes three minutes.
+          Перегрузка создаёт паралич. Маленькие завершения восстанавливают движение. 
+          Это займёт три минуты.
         </p>
 
         <div className="divider" />
@@ -23,13 +23,13 @@ export function EntryScreen({ onBegin }: EntryScreenProps) {
         {/* Single action */}
         <div className="mt-grid-6">
           <AgencyButton onClick={onBegin}>
-            Begin
+            Начать
           </AgencyButton>
         </div>
 
         {/* Minimal context */}
         <p className="text-caption mt-grid-5">
-          No account. No data stored. No judgment.
+          Без регистрации. Данные не сохраняются. Без осуждения.
         </p>
       </div>
     </div>
