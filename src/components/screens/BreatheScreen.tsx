@@ -17,9 +17,9 @@ export function BreatheScreen({ onComplete, onSkip }: BreatheScreenProps) {
   const getPhaseInstructionRu = () => {
     switch (cycle.phase) {
       case 'inhale': return 'Вдох';
-      case 'hold': return 'Задержка';
+      case 'hold': return 'Пауза';
       case 'exhale': return 'Выдох';
-      default: return isActive ? '' : 'Начни, когда будешь готов';
+      default: return isActive ? '' : 'Когда готовы';
     }
   };
 
@@ -28,7 +28,7 @@ export function BreatheScreen({ onComplete, onSkip }: BreatheScreenProps) {
       <div className="flex flex-col items-center">
         {/* Task label */}
         <span className="text-caption mb-grid-6">
-          Задание 1 из 3 — Дыхание
+          Шаг 1 из 3 — Дыхание
         </span>
 
         {/* Breath circle */}
@@ -52,7 +52,7 @@ export function BreatheScreen({ onComplete, onSkip }: BreatheScreenProps) {
         {!isActive && (
           <div className="flex flex-col items-center gap-grid-3 mt-grid-4">
             <AgencyButton onClick={start}>
-              Начать дыхание
+              Начать
             </AgencyButton>
             <GhostButton onClick={onSkip}>
               Пропустить
