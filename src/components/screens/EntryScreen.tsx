@@ -10,12 +10,12 @@ export function EntryScreen({ onBegin }: EntryScreenProps) {
       <div className="flex flex-col items-center max-w-lg text-center">
         {/* Direct statement */}
         <h1 className="text-headline mb-grid-3">
-          Ты не ленивый.
+          Дело не в лени.
         </h1>
         
         <p className="text-body mb-grid-6 max-w-md">
-          Перегрузка создаёт паралич. Маленькие завершения восстанавливают движение. 
-          Это займёт три минуты.
+          Когда всего слишком много — наступает ступор. 
+          Маленькие действия возвращают контроль. Это займёт три минуты.
         </p>
 
         <div className="divider" />
@@ -29,7 +29,7 @@ export function EntryScreen({ onBegin }: EntryScreenProps) {
 
         {/* Minimal context */}
         <p className="text-caption mt-grid-5">
-          Без регистрации. Данные не сохраняются. Без осуждения.
+          Без регистрации. Ничего не сохраняется.
         </p>
       </div>
     </div>
