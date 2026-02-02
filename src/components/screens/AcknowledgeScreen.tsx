@@ -19,7 +19,7 @@ export function AcknowledgeScreen({ onComplete }: AcknowledgeScreenProps) {
       <div className="flex flex-col items-center max-w-lg text-center">
         {/* Task label */}
         <span className="text-caption mb-grid-6">
-          Task 3 of 3 — Acknowledgment
+          Задание 3 из 3 — Признание
         </span>
 
         {/* Completion visual */}
@@ -29,18 +29,18 @@ export function AcknowledgeScreen({ onComplete }: AcknowledgeScreenProps) {
 
         {/* Statement */}
         <h2 className="text-headline mb-grid-3">
-          You did something.
+          Ты сделал что-то.
         </h2>
 
         <p className="text-body max-w-sm">
-          Three small completions. That's all. 
-          Motion has been restored.
+          Три маленьких завершения. Это всё. 
+          Движение восстановлено.
         </p>
 
         {/* Delayed action */}
         <div className={`mt-grid-6 transition-opacity duration-slow ${showButton ? 'opacity-100' : 'opacity-0'}`}>
           <AgencyButton onClick={onComplete}>
-            Complete
+            Завершить
           </AgencyButton>
         </div>
       </div>

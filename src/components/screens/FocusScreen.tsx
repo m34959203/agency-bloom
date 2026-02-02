@@ -7,9 +7,9 @@ interface FocusScreenProps {
 }
 
 const FOCUS_PROMPTS = [
-  "Name one thing you can do in the next five minutes.",
-  "What is the smallest next step?",
-  "What would 'done' look like for one task?",
+  "Назови одну вещь, которую можешь сделать за пять минут.",
+  "Какой самый маленький следующий шаг?",
+  "Как выглядит «готово» для одной задачи?",
 ];
 
 export function FocusScreen({ onComplete, onSkip }: FocusScreenProps) {
@@ -40,7 +40,7 @@ export function FocusScreen({ onComplete, onSkip }: FocusScreenProps) {
       <div className="flex flex-col items-center w-full max-w-lg">
         {/* Task label */}
         <span className="text-caption mb-grid-6">
-          Task 2 of 3 — Focus
+          Задание 2 из 3 — Фокус
         </span>
 
         {/* Prompt */}
@@ -56,7 +56,7 @@ export function FocusScreen({ onComplete, onSkip }: FocusScreenProps) {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder="Type your answer..."
+                placeholder="Напиши свой ответ..."
                 className="w-full bg-surface border border-border-subtle p-grid-3 text-body 
                            placeholder:text-text-tertiary focus:outline-none focus:border-agency
                            resize-none min-h-[120px] font-mono text-sm"
@@ -69,21 +69,21 @@ export function FocusScreen({ onComplete, onSkip }: FocusScreenProps) {
                 onClick={handleSubmit}
                 disabled={!input.trim()}
               >
-                This is my focus
+                Это мой фокус
               </AgencyButton>
               <GhostButton onClick={onSkip}>
-                Skip this step
+                Пропустить
               </GhostButton>
             </div>
 
             <p className="text-caption mt-grid-5">
-              Your response is not stored.
+              Твой ответ не сохраняется.
             </p>
           </>
         ) : (
           <div className="flex flex-col items-center animate-fade-in">
             <p className="text-title text-agency">
-              Noted.
+              Принято.
             </p>
           </div>
         )}

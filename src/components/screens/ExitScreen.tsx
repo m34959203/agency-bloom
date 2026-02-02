@@ -10,11 +10,11 @@ export function ExitScreen({ onRestart }: ExitScreenProps) {
       <div className="flex flex-col items-center max-w-lg text-center">
         {/* Simple exit message */}
         <h2 className="text-headline mb-grid-3">
-          You may close this now.
+          Можешь закрыть это.
         </h2>
 
         <p className="text-body mb-grid-6 max-w-sm">
-          Or not. There is no obligation either way.
+          Или нет. Никаких обязательств.
         </p>
 
         <div className="divider" />
@@ -22,13 +22,13 @@ export function ExitScreen({ onRestart }: ExitScreenProps) {
         {/* Optional restart */}
         <div className="mt-grid-6">
           <GhostButton onClick={onRestart}>
-            Start over
+            Начать заново
           </GhostButton>
         </div>
 
         {/* Attribution */}
         <p className="text-caption mt-grid-7">
-          A proof of concept for agency restoration.
+          Концепция восстановления агентности.
         </p>
       </div>
     </div>
