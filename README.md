@@ -1,73 +1,63 @@
-# Welcome to your Lovable project
+# Agency Bloom — Микро-практика агентности
 
-## Project info
+[![Build](https://img.shields.io/github/actions/workflow/status/m34959203/agency-bloom/ci.yml?branch=main)](https://github.com/m34959203/agency-bloom/actions)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Stack](https://img.shields.io/badge/stack-React%20%2B%20Vite%20%2B%20TypeScript-black)]()
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+> 3-минутная интерактивная практика для преодоления ступора и возврата чувства контроля: дыхание → фокусировка → действие.
 
-## How can I edit this code?
+## Проблема
 
-There are several ways of editing your application.
+Когда задач слишком много — наступает ступор. Человек знает, что надо работать, но не может начать. Классические тайм-менеджмент-инструменты не помогают в момент паралича — нужно что-то немедленное.
 
-**Use Lovable**
+## Решение
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Минималистичный веб-сервис «Агентность» проводит пользователя через 3 экрана за 3 минуты:
+1. **Дыхание** — 3 цикла дыхания для снижения тревоги
+2. **Фокус** — один вопрос: «Что можно сделать за пять минут?»
+3. **Итог** — подтверждение выбора и выход к действию
 
-Changes made via Lovable will be committed automatically to this repo.
+## Архитектура
 
-**Use your preferred IDE**
+```
+[ExperienceController]
+  ├── EntryScreen       — вход, кнопка «Начать»
+  ├── BreatheScreen     — анимированный дыхательный круг (3 цикла)
+  ├── FocusScreen       — поле ввода одной задачи
+  ├── AcknowledgeScreen — подтверждение
+  └── ExitScreen        — выход / «Ещё раз»
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Состояние управляется через `useExperience` hook, прогресс — `ProgressLine`.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Quick Start
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+git clone https://github.com/m34959203/agency-bloom.git
+cd agency-bloom
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Открой http://localhost:8080.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Стек
 
-**Use GitHub Codespaces**
+- **Frontend:** React 18, TypeScript, Vite
+- **UI:** shadcn/ui, Radix UI, Tailwind CSS
+- **Состояние:** React hooks (без внешнего стейт-менеджера)
+- **Тесты:** Vitest
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Roadmap
 
-## What technologies are used for this project?
+- [x] 3-экранный флоу (дыхание → фокус → итог)
+- [x] Анимированный дыхательный круг
+- [x] Прогресс-бар
+- [ ] Сохранение истории задач (localStorage)
+- [ ] Кастомные дыхательные паттерны
+- [ ] PWA для офлайн-использования
+- [ ] Telegram Mini App версия
 
-This project is built with:
+## Лицензия
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+[MIT](LICENSE)
